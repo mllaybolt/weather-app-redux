@@ -2,10 +2,10 @@ h1 {
   font-family: "Quicksand", sans-serif;
   color: #000000;
   display: block;
-  font-size: 76px;
-  font-weight: 100;
+  font-size: 50px;
+  font-weight: 200;
   height: 60px;
-  line-height: 35px;
+  line-height: 40px;
   text-align: left;
   margin-top: 25px;
 }
@@ -69,21 +69,21 @@ a {
 }
 
 .weather-temperature img {
-  margin-right: 5px;
-  height: 70px;
-  width: 70px;
+  margin: -20px 0 0 5px;
+  height: 100px;
+  width: 100px;
 }
 
 .weather-temperature strong {
   color: black;
-  font-size: 64px;
+  font-size: 60px;
   line-height: 1;
   font-weight: 400;
 }
 
-.weather-temperature .units {
+.weather-temperature .celsius {
   position: relative;
-  font-size: 14px;
+  font-size: 20px;
   top: -30px;
 }
 
