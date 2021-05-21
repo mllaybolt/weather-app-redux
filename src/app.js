@@ -39,7 +39,7 @@ function formatDate(timestamp) {
   return `🗓${day}, ${month} ${numericalDate}, ${year}  🕖${hours}:${minutes}`;
 }
 
-function displayTemperature(response) {
+function displayWeatherCondition(response) {
   console.log(response.data);
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -58,7 +58,7 @@ function displayTemperature(response) {
 let apiKey = "66e11cc33b0837aff2265fadb13ac0ad";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Winnipeg&appid=${apiKey}&units=metric`;
 
-axios.get(apiUrl).then(displayTemperature);
+axios.get(apiUrl).then(displayWeatherCondition);
 
 function getCurrentLocation(event) {
   event.preventDefault();
