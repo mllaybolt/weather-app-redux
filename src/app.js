@@ -36,7 +36,7 @@ function formatDate(timestamp) {
   let month = months[date.getMonth()];
   let numericalDate = date.getDate();
   let year = date.getFullYear();
-  return `🗓${day}, ${month} ${numericalDate}, ${year} 🕖${hours}:${minutes}`;
+  return `🗓${day}, ${month} ${numericalDate}, ${year}  🕖${hours}:${minutes}`;
 }
 
 function displayTemperature(response) {
