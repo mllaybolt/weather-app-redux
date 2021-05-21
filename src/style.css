@@ -1,11 +1,14 @@
+body {
+  opacity: 65%;
+}
+
 h1 {
   font-family: "Quicksand", sans-serif;
   color: #000000;
   display: block;
-  font-size: 80px;
   font-weight: 200;
-  height: 60px;
-  line-height: 40px;
+  height: 50px;
+  line-height: 30px;
   text-align: left;
   margin-top: 25px;
 }
@@ -30,13 +33,10 @@ li:first-letter {
   text-transform: capitalize;
 }
 
-small {
+.footer {
   font-family: "Quicksand", sans-serif;
+  font-size: 9px;
   margin: 75px;
-  color: black;
-}
-
-a {
   color: black;
 }
 
@@ -48,9 +48,9 @@ a {
     rgb(252, 200, 191) 11.8%,
     rgb(254, 159, 160) 89.9%
   );
-  margin: 70px 0 0 70px;
+  margin: 100px 0 0 70px;
   padding: 20px;
-  border: 1px solid #774b4b;
+  border: 1px solid black;
   box-shadow: 8px 9px 79px 29px rgba(254, 158, 159, 0.5);
   border-radius: 20px;
 }
@@ -68,14 +68,14 @@ a {
 }
 
 .weather-temperature img {
-  margin: -20px 0 0 5px;
-  height: 100px;
-  width: 100px;
+  margin: -25px 0 0 5px;
+  height: 120px;
+  width: 120px;
 }
 
 .weather-temperature strong {
   color: black;
-  font-size: 60px;
+  font-size: 70px;
   line-height: 1;
   font-weight: 400;
 }
@@ -83,13 +83,7 @@ a {
 .weather-temperature .celsius {
   position: relative;
   font-size: 20px;
-  top: -30px;
-}
-
-.weather-temperature .active {
-  color: #333333;
-  cursor: default;
-  text-decoration: none;
+  top: -35px;
 }
 
 .weather-temperature .active:hover {
@@ -104,7 +98,6 @@ a {
 .weather-forecast-date {
   font-size: 16px;
   color: black;
-  opacity: 0.6;
 }
 
 .weather-forecast-temperature-max {
