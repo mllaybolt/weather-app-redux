@@ -2,7 +2,7 @@ h1 {
   font-family: "Quicksand", sans-serif;
   color: #000000;
   display: block;
-  font-size: 50px;
+  font-size: 80px;
   font-weight: 200;
   height: 60px;
   line-height: 40px;
@@ -17,7 +17,7 @@ ul {
 
 li {
   list-style: none;
-  margin: 0;
+  margin-bottom: 5px;
   padding: 0;
   color: black;
   font-size: 17px;
@@ -107,8 +107,12 @@ a {
   opacity: 0.6;
 }
 
+.weather-forecast-temperature-max {
+  font-weight: 900;
+}
+
 .weather-forecast-temperature-min {
-  opacity: 0.5;
+  opacity: 70%;
 }
 
 .weather-forecast-temperatures {
