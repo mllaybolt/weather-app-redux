@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="16mm"
+   height="16mm"
+   viewBox="0 0 16 16"
+   version="1.1"
+   id="svg3297"
+   inkscape:export-filename="/Users/michellelaybolt/Desktop/cloud.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.0.2 (e86c8708, 2021-01-15)"
+   sodipodi:docname="broken-clouds-day.svg">
+  <defs
+     id="defs3291" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#747474"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="57.447976"
+     inkscape:cy="56.555118"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:pagecheckerboard="true"
+     inkscape:window-width="1252"
+     inkscape:window-height="1014"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata3294">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       d="m 10.965128,8.2868881 c -0.141111,0 -0.276931,0.023283 -0.404636,0.063853 0.0014,-0.020814 0.0039,-0.041981 0.0039,-0.063853 0,-0.5898444 -0.478366,-1.0678583 -1.0689158,-1.0678583 -0.10795,0 -0.212372,0.015875 -0.310445,0.045508 -0.10795,-1.0248194 -0.973313,-1.8242138 -2.026355,-1.8242138 -1.105606,0 -2.004131,0.8815916 -2.034822,1.9797888 -0.01235,0 -0.02328,-0.00106 -0.03563,-0.00106 -0.9584971,0 -1.7356665,0.7771694 -1.7356665,1.7356666 0,0.9588496 0.7771694,1.7370776 1.7356665,1.7370776 h 5.8769248 c 0.718256,0 1.30175,-0.583494 1.30175,-1.3017498 0,-0.7196667 -0.583494,-1.3031611 -1.30175,-1.3031611 z"
+       style="fill:none;stroke:#ffffff;stroke-width:0.190853;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path3490" />
+    <path
+       d="m 12.091671,10.23969 c 0.665692,-0.0575 1.186744,-0.6166551 1.186744,-1.2968107 0,-0.7196666 -0.582436,-1.3021027 -1.302102,-1.3021027 -0.140759,0 -0.275873,0.023283 -0.403225,0.063853 0.0014,-0.020814 0.0039,-0.041628 0.0039,-0.063853 0,-0.5894917 -0.479425,-1.0689167 -1.069269,-1.0689167 -0.107597,0 -0.213078,0.017286 -0.31115,0.047978 -0.106892,-1.0248194 -0.9722558,-1.825625 -2.0252968,-1.825625 -0.622653,0 -1.179336,0.2797528 -1.552928,0.7196667"
+       style="fill:none;stroke:#ffffff;stroke-width:0.190853;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+       id="path3494" />
+    <path
+       style="fill:#ffffff;stroke-width:0.357143"
+       d="m 46.827925,35.981622 c -0.27279,-2.838983 -2.162595,-4.848809 -4.735843,-5.036617 -1.261709,-0.09209 -1.497577,-0.258715 -2.032807,-1.43608 -0.668263,-1.470005 -2.478525,-2.771098 -3.861299,-2.775239 -0.719368,-0.0022 -1.019501,-0.310651 -1.544627,-1.587668 -0.925491,-2.250638 -3.250199,-4.277616 -5.534385,-4.825584 -1.016359,-0.243821 -1.770668,-0.568316 -1.676242,-0.721101 0.09443,-0.152784 0.914386,-0.464804 1.822132,-0.693378 3.559827,-0.896374 7.456923,1.484253 8.438687,5.154958 0.40866,1.527933 0.482062,1.59638 1.515519,1.413218 1.6725,-0.296423 3.31308,0.895911 3.814303,2.772142 l 0.406895,1.523131 1.672709,-0.119486 c 1.389665,-0.09927 1.86295,0.04059 2.796981,0.826527 1.21287,1.020562 1.922043,2.890445 1.591009,4.195029 -0.284011,1.119274 -1.138845,2.382839 -1.880622,2.779826 -0.541388,0.289742 -0.641127,0.104757 -0.79241,-1.469678 z"
+       id="path4506"
+       transform="scale(0.26458333)" />
+  </g>
+</svg>
