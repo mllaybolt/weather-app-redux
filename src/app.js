@@ -1,3 +1,5 @@
+// TIME & DATE //
+
 function formatDate(timestamp) {
   let date = new Date(timestamp);
   let hours = date.getHours();
@@ -36,7 +38,7 @@ function formatDate(timestamp) {
   let month = months[date.getMonth()];
   let numericalDate = date.getDate();
   let year = date.getFullYear();
-  return `🗓${day}, ${month} ${numericalDate}, ${year}  🕖${hours}:${minutes}`;
+  return `🗓 ${day}, ${month} ${numericalDate}, ${year} - 🕖${hours}:${minutes}`;
 }
 
 function formatDay(timestamp) {
@@ -47,40 +49,7 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-function displayForecast(response) {
-  let forecast = response.data.daily;
-  let forecastElement = document.querySelector("#forecast");
-  let forecastHTML = `<div class="row">`;
-  forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
-      forecastHTML =
-        forecastHTML +
-        `
-      <div class="col-2">
-        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
-        <img
-          src="https://openweathermap.org/img/wn/${
-            forecastDay.weather[0].icon
-          }@2x.png"
-          alt=""
-          width="42"
-        />
-        <div class="weather-forecast-temperatures">
-          <span class="weather-forecast-temperature-max"> ${Math.round(
-            forecastDay.temp.max
-          )}° </span>
-          <span class="weather-forecast-temperature-min"> ${Math.round(
-            forecastDay.temp.min
-          )}° </span>
-        </div>
-      </div>
-  `;
-    }
-  });
-
-  forecastHTML = forecastHTML + `</div>`;
-  forecastElement.innerHTML = forecastHTML;
-}
+// API VARIABLES //
 
 function getForecast(coordinates) {
   console.log(coordinates);
@@ -106,19 +75,56 @@ function displayTemperature(response) {
   humidityElement.innerHTML = response.data.main.humidity;
   windElement.innerHTML = Math.round(response.data.wind.speed);
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute(
-    "src",
-    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-  );
+  iconElement.setAttribute("src", `media/${response.data.weather[0].icon}.svg`);
   iconElement.setAttribute("alt", response.data.weather[0].description);
 
   getForecast(response.data.coord);
 }
 
+//UPCOMING FORECAST//
+
+function displayForecast(response) {
+  let forecast = response.data.daily;
+  let forecastElement = document.querySelector("#forecast");
+  let forecastHTML = `<div class="row">`;
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `
+      <div class="col-2">
+        <div class="weather-forecast-date">${formatDay(forecastDay.dt)}</div>
+        <img
+          src="media/${forecastDay.weather[0].icon}.svg"
+          alt=""
+          width="60"
+        />
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> ${Math.round(
+            forecastDay.temp.max
+          )}° </span>
+          <span class="weather-forecast-temperature-min"> ${Math.round(
+            forecastDay.temp.min
+          )}° </span>
+        </div>
+      </div>
+  `;
+    }
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
+//-----CITY SEARCH----------//
+
 function search(city) {
   let apiKey = "66e11cc33b0837aff2265fadb13ac0ad";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
@@ -127,10 +133,15 @@ function handleSubmit(event) {
   search(cityInputElement.value);
 }
 
+// GLOBAL VARIABLES //
+
+search("Winnipeg");
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 // GEOLOCATION //
+
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
@@ -146,6 +157,3 @@ function searchLocation(position) {
 
 let currentLocationButton = document.querySelector("#geolocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-search("Winnipeg");
-displayForecast();
