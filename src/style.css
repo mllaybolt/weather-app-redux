@@ -38,21 +38,17 @@ li:first-letter {
 
 p {
   text-align: right;
-  margin-right: 2px;
+  margin: 0 20px 0;
   opacity: 70%;
   font-size: 12px;
 }
 
-hr {
-  opacity: 65%;
-}
-
 button {
-  opacity: 75%;
+  opacity: 68%;
 }
 
 input {
-  opacity: 75%;
+  opacity: 68%;
 }
 
 iframe {
@@ -73,20 +69,21 @@ iframe {
 
 .weather-app {
   font-family: "Quicksand", sans-serif;
-  max-width: 740px;
+  max-width: 710px;
   background: linear-gradient(
     174.6deg,
     rgb(252, 200, 191) 11.8%,
     rgb(254, 159, 160) 89.9%
   );
-  padding: 15px;
+  margin: 100px 0 0 70px;
+  padding: 20px;
   border: 1px solid black;
   box-shadow: 10px 10px 100px 20px rgba(254, 158, 159, 0.4);
   border-radius: 20px;
 }
 
 .weather-app-wrapper {
-  max-width: 740px;
+  max-width: 710px;
   margin: 0 auto;
 }
 
