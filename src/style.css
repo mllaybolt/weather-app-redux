@@ -96,10 +96,10 @@ iframe {
 }
 
 .weather-temperature img {
-  margin: -25px 0 0 5px;
+  margin: -27px 0 0 5px;
   opacity: 68%;
-  height: 120px;
-  width: 120px;
+  height: 130px;
+  width: 130px;
 }
 
 .weather-temperature strong {
