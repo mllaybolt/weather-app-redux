@@ -79,8 +79,7 @@ iframe {
     rgb(252, 200, 191) 11.8%,
     rgb(254, 159, 160) 89.9%
   );
-  margin: 100px 0 0 50px;
-  padding: 20px;
+  padding: 15px;
   border: 1px solid black;
   box-shadow: 10px 10px 100px 20px rgba(254, 158, 159, 0.4);
   border-radius: 20px;
@@ -88,6 +87,7 @@ iframe {
 
 .weather-app-wrapper {
   max-width: 740px;
+  margin: 0 auto;
 }
 
 .overview {
