@@ -49,38 +49,6 @@ function formatDay(timestamp) {
   return days[day];
 }
 
-// API VARIABLES //
-
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "66e11cc33b0837aff2265fadb13ac0ad";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
-}
-
-function displayTemperature(response) {
-  let temperatureElement = document.querySelector("#temperature");
-  let cityElement = document.querySelector("#city");
-  let descriptionElement = document.querySelector("#description");
-  let humidityElement = document.querySelector("#humidity");
-  let windElement = document.querySelector("#wind");
-  let dateElement = document.querySelector("#date");
-  let iconElement = document.querySelector("#icon");
-
-  celsiusTemperature = response.data.main.temp;
-
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-  cityElement.innerHTML = response.data.name;
-  descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
-  dateElement.innerHTML = formatDate(response.data.dt * 1000);
-  iconElement.setAttribute("src", `media/${response.data.weather[0].icon}.svg`);
-  iconElement.setAttribute("alt", response.data.weather[0].description);
-
-  getForecast(response.data.coord);
-}
-
 //UPCOMING FORECAST//
 
 function displayForecast(response) {
@@ -116,15 +84,44 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-//-----CITY SEARCH----------//
+// API VARIABLES //
+
+function getForecast(coordinates) {
+  console.log(coordinates);
+  let apiKey = "66e11cc33b0837aff2265fadb13ac0ad";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
+function displayTemperature(response) {
+  let temperatureElement = document.querySelector("#temperature");
+  let cityElement = document.querySelector("#city");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let dateElement = document.querySelector("#date");
+  let iconElement = document.querySelector("#icon");
+
+  celsiusTemperature = response.data.main.temp;
+
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+  cityElement.innerHTML = response.data.name;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  dateElement.innerHTML = formatDate(response.data.dt * 1000);
+  iconElement.setAttribute("src", `media/${response.data.weather[0].icon}.svg`);
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+
+  getForecast(response.data.coord);
+}
+
+// CITY SEARCH //
 
 function search(city) {
   let apiKey = "66e11cc33b0837aff2265fadb13ac0ad";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayTemperature);
-
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
 }
 
 function handleSubmit(event) {
@@ -132,13 +129,10 @@ function handleSubmit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
-
-// GLOBAL VARIABLES //
-
-search("Winnipeg");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
+
+search("Winnipeg");
 
 // GEOLOCATION //
 
